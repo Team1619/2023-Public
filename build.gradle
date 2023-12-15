@@ -1,0 +1,126 @@
+// Resources on multi-project gradle builds
+// https://docs.gradle.org/current/userguide/multi_project_builds.html
+// https://docs.gradle.org/current/userguide/composite_builds.html?_ga=2.66124078.1099022363.1632259438-1421689162.1623448255#defining_composite_builds
+
+
+subprojects {
+    configurations {
+        dev
+        implementation.extendsFrom(dev)
+    }
+}
+
+project(':rs_dashboard') {
+    dependencies {
+        dev project(':rs_robot_core')
+    }
+}
+
+project(':rs_frc_hardware') {
+    dependencies {
+        dev project(':rs_robot_core')
+        dev project(':rs_dashboard')
+    }
+}
+
+project(':rs_basebot') {
+    dependencies {
+        dev project(':rs_robot_core')
+        dev project(':rs_dashboard')
+        dev project(':rs_frc_hardware')
+    }
+}
+
+project(':rs_tshirtbot') {
+    dependencies {
+        dev project(':rs_robot_core')
+        dev project(':rs_dashboard')
+        dev project(':rs_frc_hardware')
+    }
+}
+
+project(':rs_compbot'){
+    dependencies {
+        dev project(':rs_robot_core')
+        dev project(':rs_dashboard')
+        dev project(':rs_frc_hardware')
+    }
+}
+
+project(':rs_offseason_compbot'){
+    dependencies {
+        dev project(':rs_robot_core')
+        dev project(':rs_dashboard')
+        dev project(':rs_frc_hardware')
+    }
+}
+
+project(':rs_vertigo'){
+    dependencies {
+        dev project(':rs_robot_core')
+        dev project(':rs_dashboard')
+        dev project(':rs_frc_hardware')
+    }
+}
+
+project(':rs_protobot'){
+    dependencies {
+        dev project(':rs_robot_core')
+        dev project(':rs_dashboard')
+        dev project(':rs_frc_hardware')
+    }
+}
+
+group 'org.uacr'
+
+repositories {
+    mavenCentral()
+}
+
+task _rs_basebot_deploy {
+    dependsOn ':rs_basebot:deploy'
+}
+
+task _rs_basebot_sim {
+    dependsOn ':rs_basebot:run'
+}
+
+task _rs_tshirtbot_deploy {
+    dependsOn ':rs_tshirtbot:deploy'
+}
+
+task _rs_tshirtbot_sim {
+    dependsOn ':rs_tshirtbot:run'
+}
+
+task _rs_compbot_deploy {
+    dependsOn ':rs_compbot:deploy'
+}
+
+task _rs_compbot_sim {
+    dependsOn ':rs_compbot:run'
+}
+
+task _rs_offseason_compbot_deploy {
+    dependsOn ':rs_offseason_compbot:deploy'
+}
+
+task _rs_offseason_compbot_sim {
+    dependsOn ':rs_offseason_compbot:run'
+}
+
+task _rs_vertigo_deploy {
+    dependsOn ':rs_vertigo:deploy'
+}
+
+task _rs_vertigo_sim {
+    dependsOn ':rs_vertigo:run'
+}
+
+task _rs_protobot_deploy {
+    dependsOn ':rs_protobot:deploy'
+}
+
+task _rs_protobot_sim {
+    dependsOn ':rs_protobot:run'
+}

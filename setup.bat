@@ -1,0 +1,9 @@
+git clone https://github.com/Team1619/rs_robot_core.git
+git clone https://github.com/Team1619/rs_dashboard.git
+git clone https://github.com/Team1619/rs_frc_hardware.git
+git clone https://github.com/Team1619/rs_basebot.git
+git clone https://github.com/Team1619/rs_tshirtbot.git
+git clone https://github.com/Team1619/rs_compbot.git
+git clone https://github.com/Team1619/rs_offseason_compbot.git
+git clone https://github.com/Team1619/rs_vertigo.git
+git clone https://github.com/Team1619/rs_protobot.git

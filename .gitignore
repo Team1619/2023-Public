@@ -1,0 +1,15 @@
+.idea/
+/build/
+/.gradle/
+/rs_robot_core
+/rs_dashboard
+/rs_frc_hardware
+/rs_basebot
+/rs_tshirtbot
+/rs_compbot
+/rs_vertigo
+/rs_protobot
+
+
+
+

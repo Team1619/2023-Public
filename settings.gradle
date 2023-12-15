@@ -1,0 +1,12 @@
+rootProject.name = 'rs_framework_dev'
+
+include 'rs_robot_core'
+include 'rs_pure_pursuit'
+include 'rs_dashboard'
+include 'rs_frc_hardware'
+include 'rs_basebot'
+include 'rs_tshirtbot'
+include 'rs_compbot'
+include 'rs_offseason_compbot'
+include 'rs_vertigo'
+include 'rs_protobot'
